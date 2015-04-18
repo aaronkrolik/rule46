@@ -14,4 +14,8 @@ urlpatterns = patterns('',
 
     url(r'^player/(?P<player_id>\d+)/$', views.player, name='player'),
 
+	url(r'^incident/(?P<incident_id>\d+)/$', views.incident, name='incident'),
+
+	url(r'^team/(?P<team_id>\d+)/$', views.team, name='team'),    
+
 )

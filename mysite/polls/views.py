@@ -27,3 +27,9 @@ def vote(request, question_id):
 
 def player(request, player_id):
 	return HttpResponse("player page %s." % player_id)
+
+def team(request, team_id):
+	return HttpResponse("player page %s." % team_id)
+
+def incident(request, incident_id):
+	return HttpResponse("player page %s." % incident_id)
