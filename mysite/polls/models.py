@@ -83,6 +83,18 @@ class Article(models.Model):
 	bylines = models.ManyToManyField(Author)
 	pub_date = models.DateTimeField('date published')
 
+class Team(models.Model):
+	SPORT_CHOICES = (
+		("NFL", "NFL"),
+		("NBA","NBA")
+		)
+	def __str__(self):
+		return self.name
+	name = models.CharField(max_length=200)
+	team_id = models.CharField(max_length=200)
+
+
+
 
 # class Incident(models.Model):
 # 	title = models.CharField(max_length=200)
