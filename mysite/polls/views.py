@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 from django.template import RequestContext, loader
 
-from polls.models import Question
+from polls.models import Question, Player, Team, Incident
 # Create your views here.
 
 def index(request):
@@ -26,10 +26,22 @@ def vote(request, question_id):
 
 
 def player(request, player_id):
+	player = Player.objects.get(first_name=player_id)
+	context = RequestContext(request, {
+		'player': player,
+		})
 	return HttpResponse("player page %s." % player_id)
 
 def team(request, team_id):
+	team = Team.objects.get(team_id=team_id)
+	context = RequestContext(request, {
+		'team': team,
+		})
 	return HttpResponse("player page %s." % team_id)
 
 def incident(request, incident_id):
+	incident = Player.objects.get(name=incident_id)
+	context = RequestContext(request, {
+		'incident': incident,
+		})
 	return HttpResponse("player page %s." % incident_id)
