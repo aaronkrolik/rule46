@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 from django.template import RequestContext, loader
 
-from polls.models import Question, Player, Team, Incident
+from polls.models import Question, Player, Team, Incident, Update
 # Create your views here.
 
 def index(request):
@@ -38,24 +38,29 @@ def player_lp(request):
 def player(request, player_id):
 	player = Player.objects.get(id=player_id)
 	incidents = player.incident_set.all()
-	
+	updates = Update.objects.all()
 	template = loader.get_template("player.html")
 	context = RequestContext(request, {
 		'player': player,
 		'incidents':incidents,
+		'updates':updates,
 		})
 	return HttpResponse(template.render(context))
 
 def team(request, team_id):
 	team = Team.objects.get(team_id=team_id)
+	updates = Update.objects.all()
 	context = RequestContext(request, {
 		'team': team,
+		'updates':updates,
 		})
 	return HttpResponse("player page %s." % team_id)
 
 def incident(request, incident_id):
 	incident = Player.objects.get(name=incident_id)
+	updates = Update.objects.all()
 	context = RequestContext(request, {
 		'incident': incident,
+		'updates':updates,
 		})
 	return HttpResponse("player page %s." % incident_id)
