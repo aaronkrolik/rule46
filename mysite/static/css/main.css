@@ -1,0 +1,171 @@
+html, body {
+    background: #f1f1f2;
+}
+
+h1, h2, h3, 
+h4, h5, h6 {
+    font-family: 'HelveticaNeue-CondensedBold';
+    letter-spacing: -1px;
+}
+
+/* Carousel */
+
+.glyphicon.glyphicon-chevron-left::before {
+    color: #FFDA2D;
+}
+
+.glyphicon.glyphicon-chevron-right::before {
+    color: #FFDA2D;
+}
+
+
+/* Navigation */
+
+nav.nav.navbar {
+    background: #202020;
+    border-radius: 0px;
+    height: 84px;
+}
+
+a.navbar-brand {
+    font-family: 'HelveticaNeue-CondensedBold';
+    color: #FFDA2D;
+    margin: 15px 0px;
+    text-transform: uppercase;
+    font-size: 64px;
+}
+
+ul.nav li {
+    font-family: 'HelveticaNeue-CondensedBold';
+    text-transform: uppercase;
+    margin: 15px 7.5px;
+}
+
+ul.nav li a {
+    color: #AD951F;
+}
+
+.nav > li > a:hover {
+    background: transparent;
+    color: #FFDA2D;
+}
+
+/* Sidebar */
+
+.sidebar-header-wrapper {
+    background: #202020;
+    border-left: 10px solid #FFDA2D;
+}
+
+.sidebar-header-wrapper h3 {
+    text-transform: uppercase;
+    margin-left: 10px;
+    padding: 4px 2px;
+    color: #FFDA2D;
+}
+
+ul.sidebar-list li {
+    list-style: none;
+    font-size: 1.25em;
+    margin-left: -30px;
+    font-family: 'HelveticaNeue-Light';
+}
+
+ul.sidebar-list li a {
+    color: #202020;
+}
+
+ul.sidebar-list li a:hover {
+    text-decoration: none;
+}
+
+ul.sidebar-list span.sidebar-list-number {
+    font-family: 'HelveticaNeue-UltraLight';
+    margin-right: 12px;
+}
+
+/* Landing */
+
+div.landing-header-wrapper {
+    background: #202020;
+    color: #FFDA2D;
+    border-left: 10px solid #FFDA2D;
+}
+
+div.landing-header-wrapper h2 {
+    margin-left: 20px;
+    padding: 4px 2px;
+    text-transform: uppercase;
+}
+
+ul.landing-list {
+    list-style: none;
+    margin-left: -8px;
+}
+
+li.landing-list-item a {
+    font-family: 'HelveticaNeue-CondensedBold';
+    font-size: 1.5em;
+    list-style: none;
+}
+
+/* Index */
+
+div#index-river {
+
+}
+
+div#index-river-header {
+    background: #202020;
+    color: #FFDA2D;
+    border-left: 10px solid #FFDA2D;
+}
+
+div#index-river-header h2 {
+    margin-left: 20px;
+    padding: 4px 2px;
+    text-transform: uppercase;
+}
+
+/* Player */
+
+#player-header {
+    height: 128px;
+}
+
+#player-header h2, #player-header h3 {
+    padding: 0px;
+}
+
+#player-image {
+    float: left;
+}
+
+#player-image img {
+    max-height: 128px;
+}
+
+#player-context {
+    float: left;
+}
+
+#player-contex
+
+
+/* Utility */
+
+.page-title {
+    background: #FFDA2D;
+    color: #202020;
+    text-transform: uppercase;
+    border-left: 10px solid #202020;
+    padding-left: 20px;
+    font-size: 3em;
+}
+
+.transition {
+    -webkit-transition: all .025s ease-out 1s;
+    -moz-transition: all .025s ease-out 1s;
+    -o-transition: all .025s ease-out 1s;
+    transition: all .025s ease-out 1s;
+}

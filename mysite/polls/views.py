@@ -24,13 +24,24 @@ def results(request, question_id):
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 
+def player_lp(request):
+	landing_dict = {}
+	landing_dict["NFL"] = ["A","B","C","D"]
+	landing_dict["NBA"] = ["E","F","G", "H"]
+	template = loader.get_template("landing.html")
+	context = RequestContext(request, {
+			"landing_dict": landing_dict,
+			"lp": "team",
+		})
+	return HttpResponse(template.render(context))
 
 def player(request, player_id):
-	player = Player.objects.get(first_name=player_id)
+	player = Player.objects.all()[0]
+	template = loader.get_template("player.html")
 	context = RequestContext(request, {
 		'player': player,
 		})
-	return HttpResponse("player page %s." % player_id)
+	return HttpResponse(template.render(context))
 
 def team(request, team_id):
 	team = Team.objects.get(team_id=team_id)

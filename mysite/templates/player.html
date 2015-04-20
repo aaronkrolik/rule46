@@ -2,4 +2,15 @@
 
 {% block content %}
 
+    <div id = "player-header">
+        <div id = "player-image">
+            <img src = "http://media2.s-nbcnews.com/i/newscms/2014_49/695031/141001-aaron-hernandez-1451_259e0f7b006d7398de1bf492565f19c3.jpg"></img>
+        </div>
+        <div id = "player-context">
+            <h2>{{player.first_name }} {{ player.last_name }}</h2>
+            <h3><span class = "light">TEAM</span>{{ player.team }}</h3>
+            <h3><span class = "light">SALARY</span>{{ player.team }}</h3>
+        </div>
+    </div>
+
 {% endblock %}
