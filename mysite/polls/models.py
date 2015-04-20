@@ -91,7 +91,7 @@ class Team(models.Model):
 	def __str__(self):
 		return self.name
 	name = models.CharField(max_length=200)
-	team_id = models.CharField(max_length=200)
+	
 
 
 

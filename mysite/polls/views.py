@@ -36,10 +36,13 @@ def player_lp(request):
 	return HttpResponse(template.render(context))
 
 def player(request, player_id):
-	player = Player.objects.all()[0]
+	player = Player.objects.get(id=player_id)
+	incidents = player.incident_set.all()
+	
 	template = loader.get_template("player.html")
 	context = RequestContext(request, {
 		'player': player,
+		'incidents':incidents,
 		})
 	return HttpResponse(template.render(context))
 
